@@ -5,21 +5,20 @@ void setup() {
   // put your setup code here, to run once:
   int x;
 
-  for (x = 0; x < 9; x++){
+  for (x = 0; x <= 9; x++){
     pinMode(pinLed[x], OUTPUT);
   }
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for (numLed = 0; numLed < 9; numLed++){
+  for (numLed = 0; numLed <= 8; numLed++){
     digitalWrite(pinLed[numLed], HIGH);
     delay(300);
   }
 
-    for (numLed = 9; numLed >= 0 ; numLed--){
+    for (numLed = 8; numLed >= 0 ; numLed--){
     digitalWrite(pinLed[numLed], LOW);
     delay(300);
   }
 }
-

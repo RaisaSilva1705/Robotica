@@ -1,34 +1,11 @@
-int pinos[9] = {13,12,11,10,9,8,7,6,5};
-int pinLed;
-
-float min = 85;
-float max = 1020;
-float valorLDR;
-float luminosidade;
-
-void setup() {
-  // put your setup code here, to run once:
-
-  for (pinLed = 0; pinLed <= 0; pinLed++){
-    pinMode(pinos[pinLed], OUTPUT);
-  }
-
-  pinMode(A0, OUTPUT);
+void setup(){
+	pinMode(10, OUTPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  valorLDR = analogRead(A0);
-  luminosidade = ((valorLDR - min) / (max - min)) * 10;
-  luminosidade = (luminosidade - 10) * -1;
 
-  for (pinLed = 0; pinLed < 9; pinLed++){
-    if (pinLed < luminosidade){
-      digitalWrite(pinos[pinLed], HIGH);
-    } else {
-      digitalWrite(pinos[pinLed], LOW);
-    }
-  }
-
-  delay(500);
+void loop(){
+	digitalWrite(10, HIGH);
+	delay(1000);
+	digitalWrite(10, LOW);
+	delay(1000);
 }

@@ -1,0 +1,11 @@
+Para o aplicativo funcionar, é necessário um módulo bluetooth HC-06, com as seguintes conecxões
+
+HC-06        ARDUINO
+VCC  ------  5V
+GRD  ------  GRD
+TX   ------  RX(0)
+RX   ------  TX(1)
+
+Não é necessário nenhuma modificação no código para o aplicativo receber os dados.
+
+Download do app: no arquivo downloadTelegrafo. Basta ler o QRcode.
